@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,31 +9,37 @@
 </head>
 <link rel="stylesheet" href="../../assets/icon.css">
 <link rel="stylesheet" href="./index.css">
+
 <body>
     <header id="title">搜索</header>
-    <main id="main">      
+    <main id="main">
         <div class="search-container">
             <i class="iconfont icon-31sousuo"></i>
             <input class="search-input" placeholder="搜索歌曲" autocomplete="off"></input>
             <span class="search-clear" hidden>×</span>
-        </div>    
-        <section class="history" >
-            <span class="history-title">历史记录</span>
-            <i class="iconfont icon-shanchu"></i>
-            <div class="history-box">
-            </div>
-        </section>
-        <section class="hotSearch">
-            <span class="hotSearch-title">热搜榜</span>
-            <section class="hotSearch-body">
+        </div>
+        <div id="search-process">
+            <section class="history">
+                <span class="history-title">历史记录</span>
+                <i class="iconfont icon-shanchu" id="clearHistory"></i>
+                <div class="history-box">
+                </div>
             </section>
-        </section>
-        <section class="associativeKeyword" hidden>
-            <div class="ak-title"></div>
-            <div class="ak-body">
-            </div>
-        </section>
+            <section class="hotSearch">
+                <span class="hotSearch-title">热搜榜</span>
+                <section class="hotSearch-body">
+                </section>
+            </section>
+            <section class="associativeKeyword" hidden>
+                <div class="ak-title"></div>
+                <div class="ak-body">
+                </div>
+            </section>
+        </div>
+        <div id="search-output">
+        </div>
     </main>
 </body>
 <script type="module" src="./index.js"></script>
+
 </html>

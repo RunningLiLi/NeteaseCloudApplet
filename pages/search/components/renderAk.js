@@ -6,7 +6,7 @@ function renderAK(keyword){
     .then(res=>{
         const totalStr=res.result.songs.reduce((totalStr,item,key)=>{
             const {name}=item;
-            return `${totalStr}<div class="ak-item">
+            return `${totalStr}<div class="ak-item" keyword='${name}'>
             <i class="iconfont icon-31sousuo"></i>
             <span class="item-name">${name}</span>
         </div>` 
