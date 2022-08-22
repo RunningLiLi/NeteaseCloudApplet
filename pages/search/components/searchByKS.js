@@ -7,10 +7,11 @@ export default(keyword)=>{
     .then(res=>res.json())
     .then(res=>{
         searchInput.value=keyword;
+        console.log(res)
         searchInput.dispatchEvent(new Event("input"));
         const totalStr=res.result.songs.reduce((totalStr,item)=>{
-            const {name,album:{name:albumName},artists}=item;
-            return `${totalStr}<div class="output-item">
+            const {name,album:{name:albumName},artists,id}=item;
+            return `${totalStr}<div class="output-item" songId='${id}'>
             <span class="item-songName">${name}</span>
             <span class="item-pc">${artists.map(v=>v.name).join('/')} - ${albumName}</span>
             <i class="iconfont icon-24gl-playCircle"></i>

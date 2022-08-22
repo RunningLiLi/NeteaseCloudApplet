@@ -3,8 +3,8 @@ import searchByKS from './components/searchByKS.js';
 import showHistory from './components/showHistory.js';
 import inputTodo from './components/inputTodo.js';
 import xTodo from './components/xTodo.js';
-const [hotSearchBody, searchInput, historyBlock, searchClear, akBody, clearHistory] =
-getElement(['.hotSearch-body', '.search-input', '.history', '.search-clear', ".ak-body", '#clearHistory']);
+const [hotSearchBody, searchInput, historyBlock, searchClear, akBody, clearHistory,searchOutput] =
+getElement(['.hotSearch-body', '.search-input', '.history', '.search-clear', ".ak-body", '#clearHistory','#search-output']);
 //默认聚焦
 searchInput.focus()
 
@@ -22,6 +22,8 @@ if (!localStorage.getItem('historyItems')) {
 } else {
     showHistory()
 }
+
+
 //点击×清除input的值
 searchClear.addEventListener('click',xTodo)
 
@@ -42,6 +44,14 @@ historyBlock.addEventListener('click',(e)=>{
 })
 
 
+//监听搜索结果的点击事件
+searchOutput.addEventListener('click',(e)=>{
+    let keyNode = e.target;
+    while (keyNode.className != 'output-item') {
+        keyNode = keyNode.parentElement;
+    }
+    window.location.assign(`../playPage/index.html?songId=${keyNode.getAttribute('songId')}`)
+})
 
 
 //监听热搜的点击事件
