@@ -13,6 +13,10 @@ export function throttle(fuc, time) {
         }
     }
 }
+export function getSecond(timeStr){
+    const [min,second]=timeStr.slice(1).split(':')
+    return min*60+second*1
+}
 // export function splicingList(templateSrt, array) {
 //     console.log(templateSrt.match(/\${(([\s\S])*?)}/g))
 //     templateSrt.match(/\${(([\s\S])*?)}/g).map(str=>{

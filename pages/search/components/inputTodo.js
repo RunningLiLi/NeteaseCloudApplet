@@ -12,7 +12,6 @@ export default()=>{
         searchClear.hidden=false;
         associativeKeyword.hidden=false;
         searchOutput.hidden=true;
-        searchProcess.hidden=false;
         renderAk(searchInput.value)//渲染联想关键词
     }
     else{

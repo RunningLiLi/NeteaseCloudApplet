@@ -3,11 +3,19 @@ import searchByKS from './components/searchByKS.js';
 import showHistory from './components/showHistory.js';
 import inputTodo from './components/inputTodo.js';
 import xTodo from './components/xTodo.js';
-const [hotSearchBody, searchInput, historyBlock, searchClear, akBody, clearHistory,searchOutput] =
-getElement(['.hotSearch-body', '.search-input', '.history', '.search-clear', ".ak-body", '#clearHistory','#search-output']);
+const [hotSearchBody, searchInput, historyBlock, searchClear, akBody, clearHistory,searchOutput,back,home] =
+getElement(['.hotSearch-body', '.search-input', '.history', '.search-clear', ".ak-body", '#clearHistory','#search-output','#back','#home']);
+
 //默认聚焦
 searchInput.focus()
-
+//返回和主页
+// const [back,home]=getElement(['#back','#home']);
+back.addEventListener('click',()=>{
+    window.history.go(-1)
+})
+home.addEventListener('click',()=>{
+    window.location.replace('../index/index.html')
+})
 
 //清除所有的历史记录
 clearHistory.addEventListener('click', () => {
@@ -61,6 +69,7 @@ hotSearchBody.addEventListener('click', (e) => {
         keyNode = keyNode.parentElement;
     }
     searchByKS(keyNode.getAttribute('keyword'));
+    window.scrollTo(0,0);
 })
 
 

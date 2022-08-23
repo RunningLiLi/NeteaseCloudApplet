@@ -14,17 +14,55 @@
         <div id="mask"></div>
     </section>
     <header id="title"></header>
+    <span id="realTitle"></span>
+    <section id="nav">
+        <i class="iconfont icon-zuojiantou" id="back"></i>
+        <i class="iconfont icon-home-filling" id="home"></i>
+    </section>
     <section class="content">
         <main id="main">
-            <div class="record">
-                <img src="../../assets/record1.png" class="record-point">
+            <section class="record">
+                <img src="../../assets/record1.png" class="record-point-play">
                 <div class="record-cover">
                     <img  class='cover'>
                     <i class="iconfont icon-zanting" id='play-pause'></i>
                 </div>
-            </div>
+            </section>
+            <section class="lyricBlock">
+                <ul id='lyric-ul'>
+                </ul>
+            </section>
+            <section class="recommend">
+                <header class="re-header">
+                    <span class="re-title">喜欢这首歌的人也听</span>
+                    <span class="re-oneKey">
+                        <i class="iconfont icon-bofang"></i>
+                        <span>一键收听</span>
+                    </span>
+                </header>
+                <div class="re-body">
+                </div>
+            </section>
+            <section class="comment">
+                <header class="co-header">
+                    精彩评论
+                </header>
+                <div class="co-body">
+                    <div class="co-item">
+                        <div class="coit-header">
+                            <img class="coit-avatar" src="https://p2.music.126.net/wYuFxK1i_5jqs58xXQ-Jfg==/109951167350445378.jpg" alt="">
+                            <span class="coit-name">李子</span>
+                            <span class="coit-time">2022.7.78</span>
+                            <span class="coit-countLikes">88.7万</span>
+                            <i class="iconfont icon-dianzan"></i>
+                        </div>
+                        <div class="coit-body">指定需要移除的 EventListener 函数是否为捕获监听器。如果无此参数，默认值为 false。 如果同一个监听事件分别为“事件捕获”和“事件冒泡”注册了一次，这两次事件需要分别移除。两者不会互相干扰。移除捕获监听器不会影响非捕获版本的相同监听器，反之亦然。</div>
+                    </div>
+                </div>
+            </section>
         </main>
     </section>
+    <audio autoplay id="audio"></audio>
 </body>
 <script src="./index.js" type="module"></script>
 

@@ -1,3 +1,4 @@
+
 .topList-item ol li{
     font-size: .9rem;
     overflow: hidden;
@@ -68,6 +69,7 @@
     left: 50%;
     transform: translateX(-50%);
     top: 20px;
+    font-size: 20px;
 }
 #main{
     position: relative;
