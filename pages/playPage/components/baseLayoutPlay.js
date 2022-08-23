@@ -7,7 +7,6 @@ export default (songId) => {
         .then(res => res.json())
         .then(res => {
             const {picUrl } = res.songs[0].al;
-            console.log(res)
             realTitle.innerHTML = res.songs[0].name;
             cover.src = picUrl;
             playPageContainer.style.backgroundImage = `url(${picUrl})`;
